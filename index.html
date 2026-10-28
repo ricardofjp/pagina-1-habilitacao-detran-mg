@@ -90,14 +90,14 @@ h2{font-family:'Inter',sans-serif;font-weight:700;font-size:26px;line-height:1.2
 .item-cab .txt{flex:1;min-width:0}
 .item-cab h3{margin:0;font-family:'Inter',sans-serif;font-weight:600;font-size:16px;line-height:1.3}
 .item-cab p{margin:0;font-size:13.5px;color:var(--texto-2);display:none;text-align:left}
-.item.aberto .item-cab p{display:block}
+.item.aberto>.item-cab p{display:block}
 .mais{flex:none;background:var(--verde);color:#fff;border:0;border-radius:6px;font:700 11px/1 'Poppins',sans-serif;text-transform:uppercase;letter-spacing:.03em;padding:8px 12px;cursor:pointer;white-space:nowrap}
 .mais:hover{background:var(--verde-escuro)}
 .mais::before{content:'+ '}
-.item.aberto .mais::before{content:'– '}
+.item.aberto>.item-cab .mais::before{content:'– '}
 .corpo{display:none;padding:2px 22px 20px 56px;font-size:14px}
 .sem-num .corpo{padding-left:22px}
-.item.aberto .corpo{display:block}
+.item.aberto>.corpo{display:block}
 .corpo p{margin:0 0 10px}
 .corpo ol,.corpo ul{margin:0 0 12px;padding-left:20px}
 .corpo li{margin:2px 0}
@@ -379,7 +379,10 @@ h2{font-family:'Inter',sans-serif;font-weight:700;font-size:26px;line-height:1.2
 
   <!-- ===== Outras informações ===== -->
   <section class="secao" id="outras">
-    <h2>Outras informações</h2>
+    <div class="lista">
+      <article class="item sem-num" style="border-color:transparent">
+        <div class="item-cab" style="padding-left:0"><div class="txt"><h2 style="margin:0">Outras informações</h2></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo" style="padding-left:0">
     <div class="lista">
 
       <article class="item sem-num">
@@ -481,6 +484,9 @@ h2{font-family:'Inter',sans-serif;font-weight:700;font-size:26px;line-height:1.2
         </div>
       </article>
 
+    </div>
+        </div>
+      </article>
     </div>
   </section>
 
