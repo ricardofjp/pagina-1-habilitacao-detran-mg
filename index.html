@@ -1,0 +1,549 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primeira Habilitação Detran</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#36A763; --verde-escuro:#14733D; --verde-link:#1B7A45; --verde-claro:#CAEFDA;
+  --texto:#14201A; --texto-2:#4A5A52; --cinza:#F2F2F2; --branco:#FFFFFF;
+  --topo:#33a65b; --menu:#2b2a2b; --busca:#3e3d40;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cinza);color:var(--texto);font-family:'Poppins',system-ui,sans-serif;font-size:15px;line-height:1.6}
+a{color:var(--verde-link)}
+.container{width:100%;max-width:1110px;margin:0 auto;padding:0 16px}
+
+/* ===== Cabeçalho oficial Detran-MG ===== */
+.topo{background:var(--topo);color:#fff;font-size:11px;text-transform:uppercase;height:25px}
+.topo .container{display:flex;justify-content:space-between;align-items:center;height:25px}
+.topo ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center;margin-left:250px}
+.topo a{color:#fff;text-decoration:none}.topo a:hover{text-decoration:underline}
+.topo .letras{display:inline-flex;align-items:center;gap:6px}
+.topo .letras button{all:unset;cursor:pointer;font-weight:700;font-size:14px;line-height:1;padding:0 2px}
+.topo .gov b{font-weight:800}
+.logo-busca{background:#fff}
+.logo-busca .container{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:18px;min-height:117px}
+.logo-busca img{display:block;width:264px;max-width:100%;height:auto}
+.busca{display:flex;gap:10px;width:100%;max-width:460px}
+.busca input{flex:1;min-width:0;height:40px;border:0;border-radius:3px;padding:0 14px;font:inherit;font-size:15px;box-shadow:0 2px 6px rgba(0,0,0,.35)}
+.busca button{width:40px;height:40px;border:0;border-radius:4px;background:var(--busca);color:#fff;cursor:pointer;display:grid;place-items:center}
+.menu{background:var(--menu)}
+.menu ul{list-style:none;margin:0 auto;padding:0 16px;max-width:1110px;display:flex;justify-content:space-between;flex-wrap:wrap}
+.menu a{display:block;color:#fff;text-decoration:none;font-weight:700;font-size:12px;padding:15px 0;letter-spacing:.02em}
+.menu a:hover{text-decoration:underline}
+
+/* ===== Página (layout do PPTX) ===== */
+.pagina{max-width:1110px;margin:0 auto;padding:32px 16px 24px;display:flex;flex-direction:column;gap:20px}
+.card{background:var(--branco);border-radius:16px;padding:24px 28px}
+
+.titulo-card{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.migalhas{font-size:12px;color:var(--texto-2);margin:0 0 10px}
+.migalhas a{color:var(--texto);text-decoration:underline}
+.migalhas span{color:var(--verde-link);font-weight:500}
+.titulo{display:flex;align-items:center;gap:14px}
+.titulo img{width:44px;height:auto;flex:none}
+h1{font-family:'Inter',sans-serif;font-weight:600;font-size:28px;line-height:1.2;margin:0;letter-spacing:-.01em}
+h2{font-family:'Inter',sans-serif;font-weight:700;font-size:26px;line-height:1.2;margin:0 0 12px;letter-spacing:-.01em}
+
+.btn{display:inline-block;background:var(--verde);color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:0;border-radius:999px;padding:9px 22px;cursor:pointer;font-family:inherit;transition:background .15s}
+.btn:hover{background:var(--verde-escuro)}
+.btn-iniciar{border-radius:10px;padding:12px 30px;font-size:16px;font-weight:700;letter-spacing:.02em}
+
+.cinza{background:var(--cinza);border-radius:14px;padding:22px 22px 26px}
+.cinza p{margin:0 0 16px;text-align:justify}
+.aviso{display:flex;gap:14px;align-items:center;background:var(--verde-claro);border-radius:8px;padding:12px 16px;font-size:14px;margin:12px 0}
+.aviso img{width:34px;height:auto;flex:none}
+.aviso.sem-icone{display:block}
+.aviso p{margin:0}
+.cartilha{display:flex;align-items:center;gap:16px;background:#fff;border:3px solid var(--verde);border-radius:10px;padding:12px 18px;margin-top:16px}
+.cartilha img{width:62px;flex:none}
+.cartilha div{flex:1;font-size:13.5px;line-height:1.45}
+.cartilha strong{display:block;font-size:14px}
+.cartilha a{font-weight:700;color:var(--verde-escuro);text-decoration:none;text-align:center;font-size:15px;line-height:1.25}
+
+.como{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin:28px 4px 14px}
+.como h2{margin:0}
+.como small{font-size:12.5px;color:var(--texto-2)}
+
+/* ===== Acordeão ===== */
+.lista{display:flex;flex-direction:column;gap:10px}
+.item{background:#fff;border:2px solid transparent;border-radius:12px;transition:border-color .15s}
+.item.contorno{border-color:var(--verde)}
+.item.aberto{border-color:var(--verde)}
+.item-cab{display:flex;align-items:center;gap:14px;padding:12px 16px}
+.num{flex:none;width:26px;height:26px;border-radius:50%;background:var(--verde);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
+.item-cab .txt{flex:1;min-width:0}
+.item-cab h3{margin:0;font-family:'Inter',sans-serif;font-weight:600;font-size:16px;line-height:1.3}
+.item-cab p{margin:0;font-size:13.5px;color:var(--texto-2);display:none;text-align:left}
+.item.aberto .item-cab p{display:block}
+.mais{flex:none;background:var(--verde);color:#fff;border:0;border-radius:6px;font:700 11px/1 'Poppins',sans-serif;text-transform:uppercase;letter-spacing:.03em;padding:8px 12px;cursor:pointer;white-space:nowrap}
+.mais:hover{background:var(--verde-escuro)}
+.mais::before{content:'+ '}
+.item.aberto .mais::before{content:'– '}
+.corpo{display:none;padding:2px 22px 20px 56px;font-size:14px}
+.sem-num .corpo{padding-left:22px}
+.item.aberto .corpo{display:block}
+.corpo p{margin:0 0 10px}
+.corpo ol,.corpo ul{margin:0 0 12px;padding-left:20px}
+.corpo li{margin:2px 0}
+.corpo h4{margin:14px 0 4px;font-size:14px;font-weight:700}
+.corpo .btn{font-size:13px;padding:8px 18px;margin:4px 0 8px}
+.corpo .lnk{font-weight:600;color:var(--verde-link);font-size:13px}
+.corpo .just{text-align:justify}
+.corpo .aviso{font-size:13.5px}
+.corpo .aviso p{margin:0}
+
+.secao{background:#fff;border-radius:16px;padding:24px 28px}
+.secao>h2{margin-bottom:16px}
+.secao .item{border-color:var(--verde)}
+.secao .item-cab h3{font-size:15.5px}
+.secao .item-cab{padding:10px 16px}
+.secao .corpo{padding-left:22px}
+
+/* ===== Rodapé ===== */
+.avalie{text-align:center;padding:12px 0 0}
+.avalie strong{display:block;font-size:15px}
+.estrelas{display:inline-flex;gap:4px;margin-top:4px}
+.estrelas button{all:unset;cursor:pointer;font-size:22px;line-height:1;color:var(--texto)}
+.estrelas button.on{color:#e8a800}
+.duvida{text-align:center;color:var(--texto-2);font-size:14px;margin:18px 0 0}
+.rodape{background:#fff;margin-top:24px;border-top:1px solid #ddd;padding:24px 0 28px}
+.rodape .container{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.rodape .logos{display:flex;gap:40px;font-weight:700;font-size:15px}
+.rodape .logos a{color:var(--texto);text-decoration:none}
+.rodape address{font-style:normal;font-size:12px;color:var(--texto-2);line-height:1.7}
+.rodape .redes{display:flex;gap:14px;align-items:center;font-size:11px;font-weight:600}
+.rodape .redes svg{width:28px;height:28px;fill:var(--verde)}
+
+@media(max-width:991px){
+  .topo ul{margin-left:0;gap:12px}
+  .menu ul{justify-content:flex-start;gap:6px 22px}
+  .menu a{padding:10px 0}
+  .logo-busca .container{flex-wrap:wrap;justify-content:center}
+}
+@media(max-width:640px){
+  .topo .container{overflow-x:auto;white-space:nowrap;gap:16px}
+  .card,.secao{padding:18px 16px}
+  h1{font-size:22px}h2{font-size:22px}
+  .cinza{padding:16px 14px}
+  .corpo{padding:2px 16px 18px 16px}
+  .cartilha{flex-direction:column;text-align:center;gap:8px}
+  .cartilha div{flex:none}
+  .item-cab{padding:10px 12px;gap:10px}
+  .mais{padding:8px 9px}
+}
+</style>
+</head>
+<body>
+
+<!-- ======= CABEÇALHO ORIGINAL DO DETRAN-MG ======= -->
+<header>
+  <div class="topo">
+    <div class="container">
+      <ul>
+        <li><a href="https://www.transparencia.mg.gov.br/" target="_blank" rel="noopener">Transparência</a></li>
+        <li><a href="#">Acessibilidade</a></li>
+        <li class="letras">Letras
+          <button type="button" title="Aumentar Fonte" onclick="fonte(1)">+</button>
+          <button type="button" title="Diminuir Fonte" onclick="fonte(-1)">–</button>
+        </li>
+        <li><a href="#" onclick="document.body.classList.toggle('contraste');return false">Contraste</a></li>
+        <li><a href="https://detran.mg.gov.br/mapa-do-site">Mapa do Site</a></li>
+      </ul>
+      <a class="gov" href="https://detran.mg.gov.br/gov-br/autenticacao/login">Entrar com <b style="color:#2b61ad">g</b><b style="color:#f8bf0d">o</b><b style="color:#47af45">v</b><b style="color:#2b61ad">.b</b><b style="color:#f8bf0d">r</b></a>
+    </div>
+  </div>
+  <div class="logo-busca">
+    <div class="container">
+      <a href="https://detran.mg.gov.br/"><img src="logo-detran.png" alt="Detran MG – Departamento Estadual de Trânsito de Minas Gerais"></a>
+      <form class="busca" method="get" action="https://detran.mg.gov.br/buscas" role="search">
+        <input type="text" name="q" placeholder="O que você está procurando?" aria-label="Buscar no site">
+        <input type="hidden" name="l" value="1">
+        <button type="submit" aria-label="Buscar"><svg width="16" height="16" viewBox="0 0 512 512" fill="currentColor"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></button>
+      </form>
+    </div>
+  </div>
+  <nav class="menu" aria-label="Menu principal">
+    <ul>
+      <li><a href="https://detran.mg.gov.br/sobre">SOBRE</a></li>
+      <li><a href="https://detran.mg.gov.br/veiculos">VEÍCULOS</a></li>
+      <li><a href="https://detran.mg.gov.br/habilitacao">HABILITAÇÃO</a></li>
+      <li><a href="https://detran.mg.gov.br/infracoes">INFRAÇÕES</a></li>
+      <li><a href="https://detran.mg.gov.br/parceiros-credenciados">PARCEIROS CREDENCIADOS</a></li>
+      <li><a href="https://detran.mg.gov.br/educacao-no-transito">EDUCAÇÃO NO TRÂNSITO</a></li>
+      <li><a href="https://detran.mg.gov.br/atendimento">ATENDIMENTO</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ======= PÁGINA NO NOVO LAYOUT ======= -->
+<main class="pagina">
+
+  <section class="card">
+    <p class="migalhas"><a href="https://detran.mg.gov.br/">Início</a> / <a href="https://detran.mg.gov.br/habilitacao">Habilitação</a> / <span>Tirar a carteira de motorista (1ª habilitação): CNH ou ACC</span></p>
+    <div class="titulo-card">
+      <div class="titulo">
+        <img src="icon-cnh.png" alt="">
+        <h1>Tirar a carteira de motorista (1ª habilitação): CNH ou ACC</h1>
+      </div>
+      <a class="btn btn-iniciar" href="#como-funciona">INICIAR</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="cinza">
+      <h2>O que é?</h2>
+      <p>Serviço para quem quer tirar a carteira de motorista (primeira habilitação): <strong>Carteira Nacional de Habilitação (CNH)</strong> nas categorias A (moto), B (carro) ou AB (moto e carro), ou a Autorização para Conduzir Ciclomotores (ACC). O processo inclui cadastro, coleta de fotos e digitais, exames médico e psicológico, curso e prova teórica, aulas e prova prática de direção, e exame toxicológico.</p>
+
+      <div class="aviso">
+        <img src="icon-alerta.png" alt="">
+        <p><strong>Já começou pelo aplicativo CNH do Brasil?</strong> Você também precisa fazer as etapas abaixo para continuar seu processo em Minas Gerais.</p>
+      </div>
+
+      <div class="cartilha">
+        <img src="icon-livro.png" alt="">
+        <div><strong>O que mudou com a nova CNH do Brasil?</strong>Um guia simples e rápido com as principais mudanças para tirar sua primeira habilitação.</div>
+        <a href="#">Abrir<br>cartilha</a>
+      </div>
+
+      <div class="como" id="como-funciona">
+        <h2>Como funciona?</h2>
+        <small>Toque em <strong>Ver mais</strong> para ver o passo a passo de cada etapa</small>
+      </div>
+
+      <div class="lista">
+
+        <!-- 1 -->
+        <article class="item">
+          <div class="item-cab"><span class="num">1</span><div class="txt"><h3>Cadastro inicial</h3><p>Comece o seu processo no Detran-MG</p></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+          <div class="corpo">
+            <h4 style="margin-top:0">O que fazer:</h4>
+            <ol>
+              <li>Entre na sua conta Gov e preencha o formulário de cadastro<br><a class="btn" href="#">Faça o cadastro aqui</a></li>
+              <li>Pague a taxa de R$ 115,80, por pix ou boleto</li>
+              <li>Espere o Detran confirmar o pagamento para avançar para a próxima etapa</li>
+            </ol>
+            <h4>Como saber que o pagamento foi confirmado?</h4>
+            <ul><li><strong>Pix:</strong> confirmação na hora.</li><li><strong>Boleto:</strong> pode levar até 2 dias úteis para a confirmação.</li></ul>
+            <div class="aviso sem-icone"><p><strong>Atenção:</strong> Pague o boleto nos bancos credenciados. Pagamentos por boleto feitos fora da rede credenciada podem demorar para ser reconhecidos ou não serem identificados.<br><a class="lnk" href="#">Clique aqui para ver os bancos credenciados</a></p></div>
+            <h4>Problemas no pagamento?</h4>
+            <ul>
+              <li><strong>Perdi meu boleto:</strong> <a class="lnk" href="#">Gerar 2ª via do boleto</a></li>
+              <li><strong>Confirmar pagamento:</strong> <a class="lnk" href="#">Ver comprovante de pagamento</a></li>
+              <li><strong>Outros problemas:</strong> <a class="lnk" href="#">Fale Conosco</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="item">
+          <div class="item-cab"><span class="num">2</span><div class="txt"><h3>Coleta de fotos e digitais</h3><p>A clínica tira a sua foto e colhe as suas digitais</p></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+          <div class="corpo">
+            <ol>
+              <li>Agende a coleta quando o pagamento da taxa de cadastro for confirmado<br><a class="btn" href="#">Agende aqui</a></li>
+              <li>Vá à clínica escolhida automaticamente no dia e na hora marcados</li>
+              <li>Na clínica, os profissionais fazem a sua foto e colhem as suas digitais</li>
+            </ol>
+            <p><strong>O que levar:</strong> documento de identificação com foto</p>
+            <h4>Em qual clínica?</h4>
+            <p>O sistema escolhe a clínica para você, de acordo com a região ou a cidade onde você mora.<br><a class="lnk" href="#">Clique aqui para ver os bairros de cada região</a></p>
+            <div class="aviso sem-icone"><p><strong>Atenção:</strong> a coleta de fotos e digitais é feita junto com o exame médico e psicológico.</p></div>
+            <p><strong>Não pode ir no dia marcado?</strong> Você pode <strong>reagendar</strong>. <a class="lnk" href="#">Clique aqui para reagendar</a></p>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="item">
+          <div class="item-cab"><span class="num">3</span><div class="txt"><h3>Exame médico e avaliação psicológica</h3><p>Faça os exames obrigatórios na clínica</p></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+          <div class="corpo">
+            <ol>
+              <li>Vá à clínica no dia agendado</li>
+              <li>Faça o exame médico</li>
+              <li>Faça a avaliação psicológica</li>
+              <li>A clínica envia o resultado direto para o Detran, em até <strong>2 dias úteis</strong></li>
+            </ol>
+            <div class="aviso sem-icone"><p>Você pode ouvir falar em “psicotécnico”. É o mesmo que avaliação psicológica.</p></div>
+            <p><strong>Fique sabendo do resultado:</strong> pelos profissionais da clínica ou no próprio site do Detran-MG.<br><a class="btn" href="#">Clique aqui para ver o resultado</a></p>
+            <div class="aviso sem-icone"><p><strong>Atenção:</strong> o exame médico e a avaliação psicológica são feitos junto com a coleta de fotos e biometria.</p></div>
+            <h4>Valores para pagamento na clínica:</h4>
+            <ul><li>Exame médico: R$ 232,23</li><li>Avaliação psicológica: R$ 232,23</li></ul>
+            <ul>
+              <li>Se você for <strong>reprovado</strong> precisa repetir o exame, pagando R$ 92,87.</li>
+              <li>Se precisar <strong>reagendar</strong> não precisa pagar, desde que a mudança seja feita antes da hora do exame.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="item">
+          <div class="item-cab"><span class="num">4</span><div class="txt"><h3>Curso teórico</h3><p>Aprenda as regras de trânsito</p></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+          <div class="corpo">
+            <p>Escolha como fazer o curso:</p>
+            <ul>
+              <li><strong>Pelo aplicativo CNH do Brasil:</strong> o curso é gratuito. <a class="lnk" href="#">Clique aqui para ver as orientações</a></li>
+              <li><strong>Em uma autoescola (Centro de Formação de Condutores – CFC):</strong> o preço depende de cada autoescola. <a class="lnk" href="#">Clique aqui para ver as autoescolas do seu município</a></li>
+            </ul>
+            <p>Você já pode agendar a sua prova teórica quando quiser, não tem mais exigência de carga horária mínima.</p>
+            <div class="aviso"><img src="icon-alerta.png" alt=""><p><strong>Já começou pelo curso no aplicativo CNH do Brasil?</strong> Você também precisa fazer as outras etapas que tem aqui para continuar seu processo em Minas Gerais e conseguir tirar sua carteira de motorista.</p></div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="item">
+          <div class="item-cab"><span class="num">5</span><div class="txt"><h3>Prova teórica</h3><p>Faça a prova sobre legislação</p></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+          <div class="corpo">
+            <ol>
+              <li>Preencha o formulário para emitir a taxa da prova teórica.</li>
+              <li>Pague a taxa de R$ 115,80, por pix ou boleto.</li>
+              <li>Após a confirmação do pagamento, agende a data da prova teórica.<br><a class="btn" href="#">Clique aqui para agendar e pagar a prova</a></li>
+            </ol>
+            <h4>Como é a prova?</h4>
+            <ul><li>São 30 questões</li><li>Você precisa acertar 20 ou mais para ser aprovada</li></ul>
+            <div class="aviso sem-icone"><p><strong>Resultado:</strong> <a class="lnk" href="#">Clique aqui para ver o resultado da sua prova teórica</a></p></div>
+            <h4>Passou?</h4>
+            <p>Você já pode começar as aulas práticas, sua <strong>LADV (Licença de Aprendizagem de Direção Veicular)</strong> vai ser liberada no app da <strong>CNH do Brasil</strong> em até 2 dias.</p>
+            <h4>Não passou?</h4>
+            <p>Você pode fazer a prova de novo. Se for a primeira vez que você for refazer a prova, não precisa pagar a taxa de novo.</p>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="item">
+          <div class="item-cab"><span class="num">6</span><div class="txt"><h3>Curso prático</h3><p>Faça as aulas de direção</p></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+          <div class="corpo">
+            <p>Faça o mínimo de <strong>2 horas/aula</strong> de direção para agendar a prova prática.</p>
+            <p>Escolha como fazer o curso:</p>
+            <ul>
+              <li><strong>Instrutor autônomo credenciado:</strong> <a class="lnk" href="#">Consulte aqui os instrutores</a></li>
+              <li><strong>Autoescola de sua preferência:</strong> <a class="lnk" href="#">Consulte aqui as autoescolas</a></li>
+            </ul>
+            <div class="aviso sem-icone"><p>Os preços variam. Pesquise e compare os valores antes de iniciar o processo de habilitação.</p></div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="item">
+          <div class="item-cab"><span class="num">7</span><div class="txt"><h3>Prova prática</h3><p>Faça a prova prática de direção</p></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+          <div class="corpo">
+            <ol>
+              <li>Preencha o formulário para emitir a taxa da prova prática de direção</li>
+              <li>Pague a taxa de R$ 115,80, por pix ou boleto</li>
+              <li>Após a confirmação do pagamento, você ou seu instrutor autônomo podem agendar a data da prova prática<br><a class="btn" href="#">Clique aqui para agendar e pagar a prova</a></li>
+            </ol>
+            <h4>Passou?</h4>
+            <p>Você já pode realizar seu exame toxicológico, para depois receber sua <strong>PPD (Permissão para Dirigir)</strong>.</p>
+            <h4>Não passou?</h4>
+            <p>Você pode fazer a prova de novo. Se for a primeira vez que você for refazer a prova, não precisa pagar a taxa de novo.</p>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="item">
+          <div class="item-cab"><span class="num">8</span><div class="txt"><h3>Exame toxicológico</h3><p>Apresente resultado negativo no exame toxicológico</p></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+          <div class="corpo">
+            <p class="just">Para receber a Permissão para Dirigir (PPD) é necessário apresentar exame toxicológico negativo para quem iniciou a primeira habilitação <strong>a partir de 20/06/2026</strong> ou recomeçou o processo após perder a PPD.</p>
+            <p class="just">Caso o resultado do exame toxicológico seja positivo, você poderá solicitar contraprova pelo mesmo laboratório que analisou a amostra original.</p>
+            <div class="aviso sem-icone"><p><strong>Atenção:</strong> o Exame Toxicológico tem validade de 90 dias, recomenda-se que ele seja realizado após a aprovação na prova prática de direção.</p></div>
+            <a class="btn" href="#">Consulte aqui os laboratórios credenciados</a>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="item">
+          <div class="item-cab"><span class="num">9</span><div class="txt"><h3>Receber a CNH</h3><p>Receba a Permissão para Dirigir</p></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+          <div class="corpo">
+            <p class="just">Após a aprovação na prova de direção será emitida a Permissão para Dirigir (PPD), válida por 1 ano. O documento será enviado pelos Correios ao endereço cadastrado, com prazo de entrega de até <strong>10 dias úteis</strong>.</p>
+            <div class="aviso sem-icone"><p>Depois de 1 ano com a PPD, o condutor poderá solicitar a CNH definitiva ou ACC, desde que não tenha cometido nenhuma infração grave ou gravíssima, nem mais de uma infração média.</p></div>
+            <a class="btn" href="#">Acompanhe aqui a entrega do documento</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Outras informações ===== -->
+  <section class="secao" id="outras">
+    <h2>Outras informações</h2>
+    <div class="lista">
+
+      <article class="item sem-num">
+        <div class="item-cab"><div class="txt"><h3>Exame médico e avaliação psicológica</h3></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo">
+          <p class="just">A fotografia, a coleta da assinatura e a coleta das digitais da pessoa candidata serão feitas na clínica. Esses dados constarão na Permissão para Dirigir (PPD) e, posteriormente, na Carteira Nacional de Habilitação (CNH) ou na Autorização para Conduzir Ciclomotores (ACC).</p>
+          <ul>
+            <li>A clínica envia o resultado do exame médico e da avaliação psicológica em até dois dias úteis, incluindo o motivo da reprovação, quando houver.</li>
+            <li>Para solicitar a reavaliação do resultado de um exame realizado em clínica médica, acesse a página <a href="#">Solicitar reavaliação de resultado de exame</a>.</li>
+          </ul>
+          <p class="just"><strong>Dispensa do exame médico:</strong> pessoas tripulantes de aeronaves que possuam Certificado Médico Aeronáutico (CMA) atualizado, expedido pelas Forças Armadas ou pelo Departamento de Aviação Civil (DAC), ficam dispensadas do exame médico, ressalvados os casos previstos no § 4º do art. 147 e no art. 160 do Código de Trânsito Brasileiro (CTB). A avaliação psicológica continua obrigatória.</p>
+        </div>
+      </article>
+
+      <article class="item sem-num">
+        <div class="item-cab"><div class="txt"><h3>Prova teórica de legislação</h3></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo">
+          <p class="just"><strong>Cancelamento:</strong> pode ser solicitado somente por pessoas candidatas que moram em Belo Horizonte, desde que o pedido seja feito com até três dias úteis de antecedência em relação à data e ao horário agendados. Após esse prazo, não será permitido cancelar.</p>
+          <ul>
+            <li>Em Belo Horizonte: preencha o formulário de solicitação de cancelamento dentro do prazo estabelecido.</li>
+            <li>Nos demais municípios: compareça à UAI ou à Ciretran mais próxima do seu domicílio, dentro do mesmo prazo.</li>
+          </ul>
+          <p class="just"><strong>Reagendamento:</strong> após o cancelamento, a pessoa candidata pode agendar uma nova data para realizar a prova. Para isso, preencha o formulário de solicitação de reagendamento.</p>
+          <p class="just"><strong>Ausência na prova:</strong> a pessoa candidata poderá agendar um novo exame mediante o pagamento de uma nova taxa caso não compareça na prova de legislação.</p>
+          <p class="just"><strong>Reprovação na prova:</strong> a pessoa candidata poderá agendar uma nova prova mediante o pagamento de uma nova taxa após o lançamento do resultado.</p>
+        </div>
+      </article>
+
+      <article class="item sem-num">
+        <div class="item-cab"><div class="txt"><h3>Prova prática de direção</h3></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo">
+          <p class="just"><strong>Cancelamento:</strong> caso deseje alterar a data da prova, pessoas que moram em Belo Horizonte deverão solicitar o cancelamento pelo Fale Conosco com, no mínimo, 72 horas de antecedência em relação à data do exame. Residentes dos demais municípios deverão solicitar o cancelamento na Ciretran do próprio município.</p>
+          <p class="just"><strong>Reagendamento:</strong> a pessoa candidata poderá agendar uma nova data para realizar a prova após o cancelamento. Para isso, preencha o formulário de solicitação de reagendamento.</p>
+          <p class="just"><strong>Ausência na prova:</strong> a pessoa candidata poderá agendar um novo exame mediante o pagamento de uma nova taxa caso não compareça à prova de direção.</p>
+          <p class="just"><strong>Reprovação na prova:</strong> a pessoa candidata deverá pagar uma nova taxa e solicitar o agendamento de outra prova após o lançamento do resultado.</p>
+        </div>
+      </article>
+
+      <article class="item sem-num">
+        <div class="item-cab"><div class="txt"><h3>Exame toxicológico</h3></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo">
+          <ul>
+            <li>A verificação do resultado será realizada exclusivamente na etapa de emissão da PPD. Não é necessário realizar o exame na abertura do processo.</li>
+            <li>Caso o exame seja realizado antecipadamente e sua validade expire antes da autorização para emissão da PPD, será necessária uma nova coleta.</li>
+            <li>O exame deverá ser realizado em laboratório credenciado pela Secretaria Nacional de Trânsito (SENATRAN), conforme a regulamentação federal vigente.</li>
+            <li>A ausência de exame toxicológico válido, com resultado negativo registrado no RENACH, impedirá a emissão da PPD.</li>
+            <li>Os processos iniciados antes de 20/06/2026 permanecem submetidos às regras vigentes na data de sua abertura.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="item sem-num">
+        <div class="item-cab"><div class="txt"><h3>Permissão Para Dirigir (PPD) e CNH definitiva</h3></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo">
+          <p class="just">A Permissão para Dirigir (PPD) tem <strong>validade de um ano</strong>. Ao final desse período, a pessoa condutora poderá solicitar a CNH definitiva ou a ACC desde que não tenha cometido nenhuma infração grave ou gravíssima nem mais de uma infração média durante esse período. Caso descumpra essas condições, deverá reiniciar o processo de habilitação, sem aproveitamento das etapas já concluídas.</p>
+        </div>
+      </article>
+
+      <article class="item sem-num">
+        <div class="item-cab"><div class="txt"><h3>Categorias de CNH</h3></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo">
+          <ul>
+            <li><strong>Categoria A:</strong> habilita a pessoa condutora para dirigir veículo automotor e elétrico de duas ou três rodas, com ou sem carro lateral ou semirreboque especialmente projetado para uso exclusivo deste veículo.</li>
+            <li><strong>Categoria B:</strong> habilita a pessoa condutora para dirigir veículos automotor e elétrico, não abrangido pela categoria A, de quatro rodas com até 3.500 kg de peso bruto total e capacidade máxima de 8 passageiros, além do motorista.</li>
+            <li><strong>Categoria AB:</strong> moto e carro</li>
+            <li><strong>ACC:</strong> ciclomotor (moto pequena, de até 50 cilindradas)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="item sem-num">
+        <div class="item-cab"><div class="txt"><h3>Tirar 2 categorias ao mesmo tempo</h3></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo">
+          <ul>
+            <li>No caso de habilitação nas categorias A e B simultaneamente, a pessoa candidata será considerada aprovada somente quando passar nas duas categorias.</li>
+            <li>Na categoria AB, a pessoa candidata deverá pagar uma única taxa para cada etapa do processo. Será necessário pagar duas taxas somente para realização da prova de direção veicular, sendo uma para prova da categoria A e outra para prova da categoria B. A licença de aprendizagem será emitida em categoria AB.</li>
+            <li>Caso deseje renunciar a uma das categorias pretendidas, acesse a página <a href="#">Renunciar categoria da CNH</a>. Para adicionar categoria posteriormente, será necessário <a href="#">Adicionar categoria A ou B, ou ACC</a>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="item sem-num">
+        <div class="item-cab"><div class="txt"><h3>Atendimento presencial</h3></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo">
+          <p>Se necessário, compareça a uma Unidade de Atendimento Integrado (UAI) ou a uma Circunscrição Regional de Trânsito (Ciretran).</p>
+          <ul>
+            <li>Municípios com UAI: agende o atendimento na UAI do município.</li>
+            <li>Municípios sem UAI: agende o atendimento na Ciretran.</li>
+            <li>Ciretran sem agendamento disponível: o atendimento será realizado por ordem de chegada.</li>
+          </ul>
+          <p>Consulte as informações da UAI ou da Ciretran do seu município antes de comparecer.</p>
+        </div>
+      </article>
+
+      <article class="item sem-num">
+        <div class="item-cab"><div class="txt"><h3>Documentos de identificação que o DETRAN aceita</h3></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo">
+          <p class="just">Carteira de identidade (RG ou CIN), carteira de trabalho, carteira profissional, passaporte, carteira de identificação funcional, documentos de identificação militar e outros documentos públicos que permitam identificar a pessoa, conforme a Lei Federal nº 12.037/2009.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== Legislação ===== -->
+  <section class="secao" id="legislacao">
+    <div class="lista">
+      <article class="item sem-num" style="border-color:transparent">
+        <div class="item-cab" style="padding-left:0"><div class="txt"><h2 style="margin:0">Legislação</h2></div><button class="mais" aria-expanded="false">Ver mais</button></div>
+        <div class="corpo" style="padding-left:0">
+          <ul>
+            <li><a href="#">Lei Federal nº 9.503/1997</a></li>
+            <li><a href="#">Deliberação do Conselho Nacional de Trânsito (Contran) nº 248/2021</a></li>
+            <li><a href="#">Resolução do Conselho Nacional de Trânsito (Contran) nº 927/2022</a></li>
+            <li><a href="#">Resolução do Conselho Nacional de Trânsito (Contran) nº 1.009/2024</a></li>
+            <li><a href="#">Resolução do Conselho Nacional de Trânsito (Contran) nº 1.020/2025</a></li>
+            <li><a href="#">Portaria do Departamento Estadual de Trânsito (DETRAN/MG) nº 24/2022</a></li>
+            <li><a href="#">Portaria do Departamento Estadual de Trânsito (DETRAN/MG) nº 808/2024</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="avalie">
+    <strong>Como você avalia este serviço?</strong>
+    <div class="estrelas" role="group" aria-label="Avaliação de 1 a 5 estrelas">
+      <button type="button" aria-label="1 estrela">☆</button><button type="button" aria-label="2 estrelas">☆</button><button type="button" aria-label="3 estrelas">☆</button><button type="button" aria-label="4 estrelas">☆</button><button type="button" aria-label="5 estrelas">☆</button>
+    </div>
+    <p class="duvida">Qualquer dúvida sobre o serviço, acesse o <a href="https://detran.mg.gov.br/atendimento">Fale Conosco</a>.</p>
+  </div>
+</main>
+
+<!-- ======= RODAPÉ ORIGINAL ======= -->
+<footer class="rodape">
+  <div class="container">
+    <div class="logos">
+      <a href="https://www.mg.gov.br/" target="_blank" rel="noopener">mg.gov.br</a>
+      <a href="https://www.mg.gov.br/pagina/mg-app" target="_blank" rel="noopener">MG app Cidadão</a>
+    </div>
+    <address>DEPARTAMENTO ESTADUAL DE TRÂNSITO - DETRAN/MG<br>Rod. Papa João Paulo II, nº 4001, 3º andar - Edifício Gerais<br>Bairro Serra Verde, CEP 31.630-901, Belo Horizonte/MG</address>
+    <div class="redes">REDES SOCIAIS
+      <a href="https://www.facebook.com/detranmg" target="_blank" rel="noopener" title="Detran-MG no Facebook"><svg viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.item').forEach(function(it){
+  var b=it.querySelector('.mais'); if(!b) return;
+  var corpo=it.querySelector('.corpo');
+  b.addEventListener('click',function(){
+    var open=it.classList.toggle('aberto');
+    b.setAttribute('aria-expanded',open);
+    b.textContent=open?'Ver menos':'Ver mais';
+  });
+});
+document.querySelectorAll('.estrelas').forEach(function(g){
+  var bs=g.querySelectorAll('button');
+  bs.forEach(function(b,i){b.addEventListener('click',function(){
+    bs.forEach(function(x,j){x.textContent=j<=i?'★':'☆';x.classList.toggle('on',j<=i)});
+  })});
+});
+var tam=100;
+function fonte(d){tam=Math.min(130,Math.max(80,tam+d*10));document.body.style.fontSize=(15*tam/100)+'px'}
+</script>
+<style>
+body.contraste{background:#000;color:#fff}
+body.contraste .card,body.contraste .secao,body.contraste .cinza,body.contraste .item,body.contraste .logo-busca,body.contraste .rodape,body.contraste .cartilha{background:#000;color:#fff;border-color:#ff0}
+body.contraste a{color:#ff0}body.contraste .btn,body.contraste .mais{background:#ff0;color:#000}
+body.contraste .aviso{background:#222}body.contraste .item-cab p,body.contraste .migalhas,body.contraste address,body.contraste .duvida,body.contraste .como small{color:#ddd}
+</style>
+</body>
+</html>
+
+</body></html>
